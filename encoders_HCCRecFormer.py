@@ -1,10 +1,4 @@
 """
-Encoder8：当前论文 full model 的精简实现。
-
-这个文件只实现下面一个网络：
-    t1_only_ownmask_tumorperi_v8_dense_roi_prompt_
-    t2_region_pool_t2_cls_concat
-
 阅读顺序就是前向计算顺序：
 1. 加载 BiomedCLIP，并冻结原始 ViT blocks（terminal LayerNorm按Full模型保留可学习）；
 2. 用 APN 将不规则 T1 帧对齐到规则时间轴；
